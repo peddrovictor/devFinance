@@ -53,7 +53,9 @@
         <section id="transaction">
             <h2 class="sr-only">Transações</h2>
 
-            <a href="#" class="button n">+ Nova transação</a>
+            <a href="#" 
+            onclick="Modal.open()",
+            class="button n">+ Nova transação</a>
 
             <table id="data-table">
                 <thead>
@@ -95,7 +97,7 @@
     </main>
 
 
-    <div class="modal-overlay active">
+    <div class="modal-overlay">
         <div class="modal">
                 <div id="form">
                     <h2>Nova transação</h2>
@@ -141,7 +143,10 @@
                         </div>
 
                         <div class="input-group actions">
-                            <a href="" class="button cacel">Cancelar</a>
+                            <a 
+                            onclick="Modal.close()"
+                            href="#" 
+                            class="button cancel">Cancelar</a>
                             <button>
                                 Salvar
                             </button>
@@ -156,6 +161,26 @@
         <p>2O21 - powered by Pedro Rocha</p>
     </footer>
 
+    <script>
+        const Modal = {
+            open(){
+                //Abril modal
+                //Adicionar classe active ao modal
+                document
+                    .querySelector('.modal-overlay')
+                    .classList
+                    .add('active')
+            },
+            close(){
+                //Fechar modal
+                //Remover classe active no modal
+                document
+                    .querySelector('.modal-overlay')
+                    .classList
+                    .remove('active')
+            }
+        }
+    </script>
 
 </body>
 

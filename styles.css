@@ -285,7 +285,7 @@ input{
 footer{
     text-align: center;
     padding: 4rem 0 2rem;
-    color: white;
+    color: rgb(153, 153, 153);
 
     opacity: 0.6;
 }
